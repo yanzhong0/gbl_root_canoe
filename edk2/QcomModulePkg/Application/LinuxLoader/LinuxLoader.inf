@@ -99,6 +99,7 @@
 	TimerLib
 	StackCanary
 	FastbootLib
+	LzmaDecompressLib
 
 [LibraryClasses.AARCH64]
 

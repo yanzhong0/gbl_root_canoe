@@ -113,12 +113,12 @@ STATIC BOOLEAN ParseSecondaryGpt;
 struct StoragePartInfo Ptable[MAX_LUNS];
 struct PartitionEntry PtnEntries[MAX_NUM_PARTITIONS];
 STATIC UINT32 MaxLuns;
-STATIC UINT32 PartitionCount;
+UINT32 PartitionCount;
 STATIC BOOLEAN FirstBoot;
 STATIC struct PartitionEntry PtnEntriesBak[MAX_NUM_PARTITIONS];
 
 STATIC struct BootPartsLinkedList *HeadNode;
-STATIC EFI_STATUS
+EFI_STATUS
 GetActiveSlot (Slot *ActiveSlot);
 STATIC EFI_STATUS
 GetAtomicABActiveSlot (Slot *ActiveSlot);
@@ -1500,7 +1500,7 @@ AtomicABEnabled (VOID)
 }
 #endif
 
-STATIC EFI_STATUS
+EFI_STATUS
 GetActiveSlot (Slot *ActiveSlot)
 {
   EFI_STATUS Status = EFI_SUCCESS;
